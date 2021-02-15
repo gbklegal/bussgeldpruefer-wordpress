@@ -12,6 +12,9 @@ module.exports = {
           hover: '#4FB9B5',
           DEFAULT: '#5CC8C5',
         }
+      },
+      fontFamily: {
+        'sans': ['Roboto', 'sans-serif'],
       }
     },
   },
