@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+        @apply bg-secondary rounded border-2 border-secondary hover:bg-secondary-hover hover:border-secondary-hover shadow text-white py-2 px-1;
+    }
+
+    .btn-secondary {
+        @apply border-2 border-primary rounded hover:text-white hover:bg-primary-hover hover:border-primary-hover py-2 px-1 shadow;
+    }
+
+    .header-navigation li {
+        @apply my-2;
+    }
+
+    .header-navigation li a {
+        @apply py-1 hover:underline;
+    }
+}
