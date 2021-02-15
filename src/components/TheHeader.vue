@@ -1,9 +1,15 @@
 <template>
     <header>
         <!-- TODO: add skip navigation link -->
-        <nav class="my-3 pb-2 px-3 border-b-2 border-primary">
+        <nav id="nav" class="my-3 pb-2 px-3 border-b-2 border-primary">
+                <!--<div id="nav">
+                </div>-->
+
             <div class="">
-                <img class="w-44" src="../assets/logo.png" alt="BussgeldPrüfer">
+                <router-link to="/">
+                    <img class="w-44" src="../assets/logo.png" alt="BussgeldPrüfer">
+                </router-link>
+
                 <button v-on:click="menuOpen = !menuOpen" class="w-7 xl:hidden xl:invisible">
                     <svg v-if="!menuOpen" role="img" aria-labelledby="openMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <title id="openMenu">Open Menu</title>
@@ -15,22 +21,29 @@
                     </svg>
                 </button>
                 <div class="navigation-buttons">
-                    <a href="#" 
-                        class="btn-primary"
-                        >Bußgeldbescheid Prüfung</a>
-                    <a href="#" 
-                        class="btn-secondary"
-                        >Login</a>
+                    <router-link class="btn-primary" to="/bussgeldbescheid-pruefen">Bussgeldbescheid Prüfung</router-link>
+                    <router-link class="btn-secondary" to="/login">Login</router-link>
                 </div>
             </div>
-            
             <ul class="header-navigation" v-if="menuOpen">
-                <li><a href="#">Wie funktioniert's?</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Bußgeldkatalog</a></li>
-                <li><a href="#">Bußgeldratgeber</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">relevante Bußgeldthemen</a></li>
+                <li>
+                    <router-link to="/wie-funktioniert-es">Wie funktioniert's</router-link>
+                </li>
+                <li>
+                    <router-link to="/kontakt">Kontakt</router-link>
+                </li>
+                <li>
+                    <router-link to="/bussgeldkatalog">Bußgeldkatalog</router-link>
+                </li>
+                <li>
+                    <router-link to="/ratgeber">Bußgeldratgeber</router-link>
+                </li>
+                <li>
+                    <router-link to="/faq">FAQ</router-link>
+                </li>
+                <li>
+                    <router-link to="/relevante-themen">relevante Bußgeldthemen</router-link>
+                </li>
             </ul>
         </nav>
     </header>

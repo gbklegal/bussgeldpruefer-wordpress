@@ -1,6 +1,7 @@
 <template>
-  <div id="app" class="text-primary">
+  <div class="text-primary" id="app">
     <Header />
+      <router-view/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ export default {
   components: {
     Header
   }
+
 }
 </script>
 
