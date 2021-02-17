@@ -1,5 +1,5 @@
 <template>
-    <footer class="my-3 px-3 border-t-2 border-primary pt-2">
+    <footer class="px-3 border-t-2 border-primary pt-2">
         <p>&copy; BussgeldPruefer</p>
         <nav>
             <ul>

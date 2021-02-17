@@ -2,7 +2,7 @@
   <div class="text-primary" id="app">
     <Header />
     <main id="main">
-      <router-view class="m-3"/>
+      <router-view/>
       <Badge />
     </main>
     <Footer />
@@ -32,5 +32,10 @@ export default {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   width: 100vw;
+  max-width: 100%;
+}
+
+#main {
+  max-width: 100%;
 }
 </style>
