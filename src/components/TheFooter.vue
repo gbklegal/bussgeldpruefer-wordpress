@@ -31,8 +31,8 @@
             </div>
         </div>
         <div class="app">
-            <img class="h-12" src="../assets/google-play-badge.png" alt="Jetzt bei Google Play downloaden.">
-            <img class="h-12" src="../assets/app-store-badge.png" alt="Laden im App Store.">
+            <img class="h-12" src="../assets/img/google-play-badge.png" alt="Jetzt bei Google Play downloaden.">
+            <img class="h-12" src="../assets/img/app-store-badge.png" alt="Laden im App Store.">
         </div>
     </footer>
 </template>
