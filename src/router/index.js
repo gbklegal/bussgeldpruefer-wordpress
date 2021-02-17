@@ -49,6 +49,26 @@ const routes = [
     path: '/relevante-themen',
     name: 'Topics',
     component: () => import('../views/Topics.vue')
+  },
+  {
+    path: '/partnerprogramm',
+    name: 'Partner',
+    component: () => import('../views/Partner.vue')
+  },
+  {
+    path: '/kontakt',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue')
+  },
+  {
+    path: '/impressum',
+    name: 'LegalContact',
+    component: () => import('../views/LegalContact.vue')
+  },
+  {
+    path: '/rechtliche-hinweise',
+    name: 'TermsOfService',
+    component: () => import('../views/TermsOfService.vue')
   }
 
 ]

@@ -1,0 +1,89 @@
+<template>
+    <footer class="my-3 px-3 border-t-2 border-primary pt-2">
+        <p>&copy; BussgeldPruefer</p>
+        <nav>
+            <ul>
+                <li>
+                   <router-link to="/partnerprogramm">Partnerprogramm</router-link>
+                </li>
+                <li>
+                    <router-link to="/kontakt">Kontakt</router-link>
+                </li>
+                <li>
+                    <router-link to="/impressum">Impressum</router-link>
+                </li>
+                <li>
+                    <router-link to="/datenschutz">Datenschutz</router-link>
+                </li>
+                <li>
+                    <router-link to="/rechtliche-hinweise">Rechtliche Hinweise</router-link>
+                </li>
+            </ul>
+        </nav>
+        <div class="footer-contact">
+            <div>
+                <span>Email:</span>
+                <a href="mailto:dialog@bussgeldpruefer.de">dialog@bussgeldpruefer.de</a>
+            </div>
+            <div>
+                <span>Tel:</span>
+                <a href="tel:091112345678">0911/12345678</a>
+            </div>
+        </div>
+        <div class="app">
+            <img class="h-12" src="../assets/google-play-badge.png" alt="Jetzt bei Google Play downloaden.">
+            <img class="h-12" src="../assets/app-store-badge.png" alt="Laden im App Store.">
+        </div>
+    </footer>
+</template>
+<script>
+export default {
+    name: 'Footer',
+}
+</script>
+<style scoped>
+    footer {
+        display: grid;
+        grid-template-areas:
+            'logo'
+            'nav'
+            'contact'
+            'app';
+        justify-items: end;
+    }
+
+    p {
+        grid-area: logo;
+        justify-self: start;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 0.5em;
+    }
+
+    .footer-contact {
+        grid-area: contact;
+    }
+
+    .app {
+        grid-area: app;
+    }
+
+    .app img {
+        display: inline;
+    }
+
+    @media (min-width: 768px) {
+        footer {
+            grid-template-areas:
+                'logo nav'
+                '. contact'
+                '. app';
+        }
+    }
+</style>

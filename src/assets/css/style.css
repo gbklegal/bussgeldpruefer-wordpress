@@ -15,7 +15,7 @@
         @apply my-2;
     }
 
-    .header-navigation li a {
+    nav li a {
         @apply py-1 hover:underline;
     }
 }
