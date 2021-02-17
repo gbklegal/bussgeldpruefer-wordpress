@@ -2,7 +2,8 @@
   <div class="text-primary" id="app">
     <Header />
     <main id="main">
-      <router-view/>
+      <router-view class="m-3"/>
+      <Badge />
     </main>
     <Footer />
   </div>
@@ -11,12 +12,14 @@
 <script>
 import Header from './components/TheHeader.vue'
 import Footer from './components/TheFooter.vue'
+import Badge from './components/TheBadge.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Footer
+    Footer,
+    Badge
   }
 
 }
@@ -24,7 +27,7 @@ export default {
 
 <style>
 #app {
-  font-family: sans-serif;
+  font-family: 'Roboto' sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
