@@ -1,11 +1,8 @@
 <template>
     <header>
-        <!-- TODO: add skip navigation link -->
+        <a class="sr-only" href="#main">Skip to content</a>
         <nav id="nav" class="my-3 pb-2 px-3 border-b-2 border-primary">
-                <!--<div id="nav">
-                </div>-->
 
-            <!--<div class="navigation-container">-->
                 <router-link to="/">
                     <svg class="w-44 h-8" role="img" aria-labelledby="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13841" height="2000" viewBox="0 0 13841 2000">
                         <title id="logo">BussgeldPrüfer</title>
@@ -28,7 +25,6 @@
                     <router-link class="btn-primary" to="/bussgeldbescheid-pruefen">Bussgeldbescheid Prüfung</router-link>
                     <router-link class="btn-secondary" to="/login">Login</router-link>
                 </div>
-            <!--</div>-->
             <ul class="header-navigation" :class="{ block: menuOpen }">
                 <li>
                     <router-link to="/wie-funktioniert-es">Wie funktioniert's</router-link>
@@ -106,14 +102,19 @@ export default {
                 'logo btns toggle'
                 'ul ul ul';
             align-items: center;
+            grid-template-columns: 1fr auto;
+        }
+
+        .navigation-buttons a {
+            margin-right: 0.5em;
         }
     }
 
     @media (min-width: 1300px) {
         nav {
             grid-template-areas:
-                'logo ul btns';
-            align-items: center;
+                'logo btns'
+                'ul ul';
         }
 
         .header-navigation {
