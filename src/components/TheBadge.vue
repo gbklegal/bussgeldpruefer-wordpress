@@ -1,7 +1,7 @@
 <template>
 <div v-if="!hideBadge" v-on:click="hideBadge = !hideBadge" class="ease-in-out transition-all duration-500 badge-container fixed bg-transparent w-full">
     <div class="badge shadow cursor-pointer bg-secondary  place-content-center gap-2 grid">
-        <img class="w-28 m-2" src="../assets/bgpapp-qrcode.png" alt="Hol dir die BussgeldPrüfer App via QR Code.">
+        <img class="w-28 m-2 rounded shadow" src="../assets/img/bgpapp-qrcode.png" alt="Hol dir die BussgeldPrüfer App via QR Code.">
         <p class="my-auto text-white">Lade die App für den <br>Quick-Check</p>
     </div>
 </div>

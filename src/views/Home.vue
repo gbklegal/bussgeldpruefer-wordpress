@@ -1,54 +1,89 @@
 <template>
   <div class="home">
     <div class="header md:flex">
-      <header class="m-3 md:w-3/5 grid content-center">
-        <h1 class="text-5xl font-light mb-6">
+      <header class="md:w-2/4 p-3 flex">
+        <div class="grid container-half h-full ml-auto content-center">
+          <h1 class="text-center text-4xl md:text-left md:text-5xl font-light mb-6">
           Du bist nur 2 Minuten davon entfernt, deinen Bußgeldbescheid anzufechten.
         </h1>
-        <p>Hol dir jetzt die BussgeldPrüfer App, um eine unverbindliche Ersteinschätzung zu erhalten – komplett kostenlos.</p>
+        <p class="text-center md:text-left">Hol dir jetzt die BussgeldPrüfer App, um eine unverbindliche Ersteinschätzung zu erhalten – komplett kostenlos.</p>
+        </div>
       </header>
-      <section class="bg-primary p-3 my-1 text-white grid">
-        <ul role="list" class="self-center justify-self-center">
-          <li>Kostenlose Ersteinschätzung</li>
-          <li>in 90 Sekunden zum Ergebnis</li>
-          <li>Digital ausführbar</li>
-        </ul>
-        <img class="w-56 justify-self-center sm:justify-self-end" src="../assets/iphone-x-splashscreen.webp" alt="BussgeldPrüfer App auf einem Handy.">
-        <p class="justify-self-center">überall - digital - verbunden</p>
+      <section class="bg-primary md:w-2/4 p-3 my-1 text-white">
+        <div class="grid container-half">
+          <img class="w-56 justify-self-center sm:justify-self-end" src="../assets/img/iphone-x-splashscreen.webp" alt="BussgeldPrüfer App auf einem Handy.">
+          <ul role="list" class="mb-3 md:mb-0 self-center justify-self-center">
+            <li>Kostenlose Ersteinschätzung</li>
+            <li>in 90 Sekunden zum Ergebnis</li>
+            <li>Digital ausführbar</li>
+          </ul>
+          <p class="justify-self-center">überall - digital - verbunden</p>
+        </div>
       </section>
     </div>
+
     <BasicCTA title="Bußgeldbescheid erhalten?" subtitle="Punkte in Flensburg? Führerschein weg? Fahrverbot? MPU-Test? Geblitzt?" />
+
+    <section class="">
+      <div class="container flex flex-col md:flex-row justify-center">
+        <div class="mx-auto md:w-2/4">
+          <h2 class="text-center md:text-left font-medium text-primary mb-5 text-3xl md:text-4xl md:mx-0">Mit dem BussgeldPrüfer fährst du richtig:</h2>
+          <ul role="list" class="w-max mx-auto mb-5 md:mx-0">
+            <li>Unverbindliche Ersteinschätzung in 90 Sekunden</li>
+            <li>Kostenlose telefonische Beratung</li>
+            <li>Schnelle Überprüfung Deiner Erfolgsaussichten</li>
+          </ul>
+        </div>
+
+        <div class="mx-auto md:w-2/4 relative h-52 w-96 pr-3">
+          <div class="circle-one bg-white grid place-items-center absolute text-center rounded-full h-32 w-32 border-2 border-secondary">
+            <p>Kostenlose Erstberatung</p>
+          </div>
+          <div class="circle-two bg-white grid place-items-center absolute text-center rounded-full h-32 w-32 border-2 border-secondary">
+            <p>Anwaltliche Prüfung</p>
+          </div>
+          <div class="circle-three bg-white grid place-items-center absolute text-center rounded-full h-32 w-32 border-2 border-secondary">
+            <p>in 24 Std. Rückmeldung</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <BasicSteps />
   </div>
 </template>
 
 <script>
 import BasicCTA from '../components/BasicCTA.vue'
+import BasicSteps from '../components/BasicSteps.vue'
+
 
 export default {
   name: 'Home',
   components: {
     BasicCTA,
+    BasicSteps
   }
 }
 </script>
 
 <style scoped>
-  .header section {
+  .header .container-half {
     grid-template-areas:
-      'ul'
       'img'
+      'ul'
       'p ';
   }
 
-  .header section ul {
+  .header .container-half ul {
     grid-area: ul;
   }
 
-  .header section img {
+  .header .container-half img {
     grid-area: img;
   }
 
-  .header section p {
+  .header .container-half p {
     grid-area: p;
   }
 
@@ -57,8 +92,20 @@ export default {
     padding-right: 0.2em;
   }
 
+  .circle-two {
+    left: 108px;
+    top: 60px;
+    z-index: 1;
+  }
+
+  .circle-three {
+    left: 210px;
+    top: 20px;
+    z-index: 2;
+  }
+
   @media (min-width: 640px) {
-    .header section {
+    .header .container-half {
       grid-template-areas:
         'ul img'
         'p p';
