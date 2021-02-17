@@ -1,7 +1,7 @@
 <template>
     <header>
         <a class="sr-only" href="#main">Skip to content</a>
-        <nav id="nav" class="my-3 pb-2 px-3 border-b-2 border-primary">
+        <nav id="nav" class="my-3 pb-2 px-3 border-b-2 border-primary shadow">
 
                 <router-link to="/">
                     <svg class="w-44 h-8" role="img" aria-labelledby="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13841" height="2000" viewBox="0 0 13841 2000">
