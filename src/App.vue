@@ -1,6 +1,7 @@
 <template>
   <div class="text-primary" id="app">
     <Header />
+    <!-- TODO: Do we need lazy-load img -->
     <main id="main">
       <router-view/>
       <Badge />
