@@ -18,7 +18,7 @@
             <li>in 90 Sekunden zum Ergebnis</li>
             <li>Digital ausführbar</li>
           </ul>
-          <p class="justify-self-center">überall - digital - verbunden</p>
+          <p class="justify-self-center mt-4">überall - digital - verbunden</p>
         </div>
       </div>
     </header>
@@ -77,9 +77,10 @@
     <BasicCTA title="Kostenlose Prüfung ob sich ein Einspruch gegen Deinen Bußgeldbescheid lohnt." />
 
     <!-- TODO: Blog / last 3 Blogposts -->
-    <!-- TODO: Kundenfeedback -->
+    <!-- TODO: Clientfeedback -->
 
     <BasicSocialMedia />
+    <BasicWarrants />
 
   </div>
 </template>
@@ -88,13 +89,15 @@
 import BasicCTA from '../components/BasicCTA.vue'
 import BasicSteps from '../components/BasicSteps.vue'
 import BasicSocialMedia from '../components/BasicSocialMedia.vue'
+import BasicWarrants from '../components/BasicWarrants.vue'
 
 export default {
   name: 'Home',
   components: {
     BasicCTA,
     BasicSteps,
-    BasicSocialMedia
+    BasicSocialMedia,
+    BasicWarrants
   }
 }
 </script>

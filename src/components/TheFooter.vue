@@ -55,6 +55,7 @@ export default {
     p {
         grid-area: logo;
         justify-self: start;
+        align-self: center;
     }
 
     nav {
