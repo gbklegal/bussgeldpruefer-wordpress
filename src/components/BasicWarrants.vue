@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-    name: 'BasicWarrants',
+    name: 'Warrants',
 }
 </script>
 <style scoped>

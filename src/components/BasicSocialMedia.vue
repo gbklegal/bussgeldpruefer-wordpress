@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-    name: 'BasicSocialMedia',
+    name: 'SocialMedia',
 }
 </script>
 <style scoped>

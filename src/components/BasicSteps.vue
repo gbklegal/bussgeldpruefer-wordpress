@@ -110,7 +110,7 @@
 </template>
 <script>
 export default {
-    name: 'BasicSteps',
+    name: 'Steps',
 }
 </script>
 <style scoped>

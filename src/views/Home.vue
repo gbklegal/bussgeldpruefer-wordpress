@@ -23,7 +23,7 @@
       </div>
     </header>
 
-    <BasicCTA title="Bußgeldbescheid erhalten?" subtitle="Punkte in Flensburg? Führerschein weg? Fahrverbot? MPU-Test? Geblitzt?" />
+    <CTA title="Bußgeldbescheid erhalten?" subtitle="Punkte in Flensburg? Führerschein weg? Fahrverbot? MPU-Test? Geblitzt?" />
 
     <section class="">
       <div class="container flex flex-col md:flex-row justify-center">
@@ -50,7 +50,7 @@
       </div>
     </section>
 
-    <BasicSteps />
+    <Steps />
 
     <section class="success md:flex">
       <div class="first-half md:w-2/4 px-3 flex">
@@ -74,33 +74,30 @@
       </div>
     </section>
 
-    <BasicCTA title="Kostenlose Prüfung ob sich ein Einspruch gegen Deinen Bußgeldbescheid lohnt." />
+    <CTA title="Kostenlose Prüfung ob sich ein Einspruch gegen Deinen Bußgeldbescheid lohnt." />
 
     <!-- TODO: Blog / last 3 Blogposts -->
     <!-- TODO: Clientfeedback -->
 
-    <BasicSocialMedia />
-    <BasicWarrants />
-    <BasicBackToTop />
+    <SocialMedia />
+    <Warrants />
 
   </div>
 </template>
 
 <script>
-import BasicCTA from '../components/BasicCTA.vue'
-import BasicSteps from '../components/BasicSteps.vue'
-import BasicSocialMedia from '../components/BasicSocialMedia.vue'
-import BasicWarrants from '../components/BasicWarrants.vue'
-import BasicBackToTop from '../components/BasicBackToTop.vue'
+import CTA from '../components/BasicCTA.vue'
+import Steps from '../components/BasicSteps.vue'
+import SocialMedia from '../components/BasicSocialMedia.vue'
+import Warrants from '../components/BasicWarrants.vue'
 
 export default {
   name: 'Home',
   components: {
-    BasicCTA,
-    BasicSteps,
-    BasicSocialMedia,
-    BasicWarrants,
-    BasicBackToTop
+    CTA,
+    Steps,
+    SocialMedia,
+    Warrants,
   }
 }
 </script>

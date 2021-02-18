@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-    name: 'BasicBackToTop',
+    name: 'BackToTop',
 }
 </script>
 <style scoped>

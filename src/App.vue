@@ -5,6 +5,7 @@
     <main id="main">
       <router-view/>
       <Badge />
+      <BackToTop />
     </main>
     <Footer />
   </div>
@@ -14,13 +15,15 @@
 import Header from './components/TheHeader.vue'
 import Footer from './components/TheFooter.vue'
 import Badge from './components/TheBadge.vue'
+import BackToTop from './components/TheBackToTop.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
     Footer,
-    Badge
+    Badge,
+    BackToTop
   }
 
 }
