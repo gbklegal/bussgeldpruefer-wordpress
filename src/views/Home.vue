@@ -1,16 +1,17 @@
 <template>
   <div class="home">
-    <div class="header md:flex">
-      <header class="md:w-2/4 p-3 flex">
-        <div class="grid container-half h-full ml-auto content-center">
+    <header class="md:flex">
+      <div class="first-half md:w-2/4 px-3 flex">
+        <div class="grid container-half h-full pt-11 pb-3 ml-auto content-center">
           <h1 class="text-center text-4xl md:text-left md:text-5xl font-light mb-6">
-          Du bist nur 2 Minuten davon entfernt, deinen Bußgeldbescheid anzufechten.
-        </h1>
-        <p class="text-center md:text-left">Hol dir jetzt die BussgeldPrüfer App, um eine unverbindliche Ersteinschätzung zu erhalten – komplett kostenlos.</p>
+            Du bist nur 2 Minuten davon entfernt, deinen Bußgeldbescheid anzufechten.
+          </h1>
+          <p class="text-center md:text-left">Hol dir jetzt die BussgeldPrüfer App, um eine unverbindliche Ersteinschätzung zu erhalten – komplett kostenlos.</p>
         </div>
-      </header>
-      <section class="bg-primary md:w-2/4 p-3 my-1 text-white">
-        <div class="grid container-half">
+      </div>
+
+      <div class="second-half bg-primary md:w-2/4 px-3 my-1 text-white">
+        <div class="grid container-half pb-11 pt-3">
           <img class="w-56 justify-self-center sm:justify-self-end" src="../assets/img/iphone-x-splashscreen.webp" alt="BussgeldPrüfer App auf einem Handy.">
           <ul role="list" class="mb-3 md:mb-0 self-center justify-self-center">
             <li>Kostenlose Ersteinschätzung</li>
@@ -19,8 +20,8 @@
           </ul>
           <p class="justify-self-center">überall - digital - verbunden</p>
         </div>
-      </section>
-    </div>
+      </div>
+    </header>
 
     <BasicCTA title="Bußgeldbescheid erhalten?" subtitle="Punkte in Flensburg? Führerschein weg? Fahrverbot? MPU-Test? Geblitzt?" />
 
@@ -50,46 +51,91 @@
     </section>
 
     <BasicSteps />
+
+    <section class="success md:flex">
+      <div class="first-half md:w-2/4 px-3 flex">
+        <div class="grid container-half h-full pt-11 pb-3 ml-auto content-center">
+          <h2 class="text-center md:text-left font-medium text-primary mb-5 text-3xl md:text-4xl">
+            Maximiere deine Erfolgsaussichten
+          </h2>
+          <p class="text-center md:text-left">Mit dem BussgeldPrüfer erhöhst du deine Chance erfolgreich gegen deinen Bußgeldbescheid vorzugehen. Klicke jetzt auf “Prüfung Bußgeldbescheid” um deinen Bußgeldbescheid anzufechten.</p>
+        </div>
+      </div>
+
+      <div class="second-half bg-primary md:w-2/4 px-3 my-1 text-secondary">
+        <div class="grid container-half pb-11 pt-3">
+          <img class="w-56 justify-self-center sm:justify-self-end" src="../assets/img/iphone-x-splashscreen.webp" alt="BussgeldPrüfer App auf einem Handy.">
+          <ul role="list" class="mb-3 md:mb-0 self-center justify-self-center">
+            <li>Kompetente<br>Beratung</li>
+            <li>Vollständige<br>Entlastung</li>
+            <li>Schnell &amp;<br>Unkompliziert</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <BasicCTA title="Kostenlose Prüfung ob sich ein Einspruch gegen Deinen Bußgeldbescheid lohnt." />
+
+    <!-- TODO: Blog / last 3 Blogposts -->
+    <!-- TODO: Kundenfeedback -->
+
+    <BasicSocialMedia />
+
   </div>
 </template>
 
 <script>
 import BasicCTA from '../components/BasicCTA.vue'
 import BasicSteps from '../components/BasicSteps.vue'
-
+import BasicSocialMedia from '../components/BasicSocialMedia.vue'
 
 export default {
   name: 'Home',
   components: {
     BasicCTA,
-    BasicSteps
+    BasicSteps,
+    BasicSocialMedia
   }
 }
 </script>
 
 <style scoped>
-  .header .container-half {
+  header .second-half .container-half {
     grid-template-areas:
       'img'
       'ul'
       'p ';
   }
 
-  .header .container-half ul {
+  header .second-half .container-half ul {
     grid-area: ul;
   }
 
-  .header .container-half img {
+  header .second-half .container-half img {
     grid-area: img;
   }
 
-  .header .container-half p {
+  header .second-half .container-half p {
     grid-area: p;
   }
 
   li:before {
     content: "-";
     padding-right: 0.2em;
+  }
+
+  /*.success ul {
+    list-style-image: url("../assets/img/check-mark.svg");
+  }*/
+
+  .success ul li:before {
+    content: "";
+  }
+
+  .success li {
+    margin-bottom: 2em;
+    padding-left: 2.4em;
+    background: url("../assets/img/check-mark.svg") no-repeat 0 50%;
   }
 
   .circle-two {
@@ -104,11 +150,30 @@ export default {
     z-index: 2;
   }
 
+  .success .second-half .container-half {
+    grid-template-areas:
+      'img'
+      'ul';
+  }
+
+  .success .second-half .container-half img {
+    grid-area: img;
+  }
+
+  .success .second-half .container-half ul {
+    grid-area: ul;
+  }
+
   @media (min-width: 640px) {
-    .header .container-half {
+    header .second-half .container-half {
       grid-template-areas:
         'ul img'
         'p p';
+    }
+
+    .success .second-half .container-half {
+      grid-template-areas:
+        'ul img';
     }
   }
 </style>

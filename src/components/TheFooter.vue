@@ -22,11 +22,11 @@
         </nav>
         <div class="footer-contact">
             <div>
-                <span>Email:</span>
+                <span class="mr-2">Email:</span>
                 <a href="mailto:dialog@bussgeldpruefer.de">dialog@bussgeldpruefer.de</a>
             </div>
             <div>
-                <span>Tel:</span>
+                <span class="mr-2">Tel:</span>
                 <a href="tel:091112345678">0911/12345678</a>
             </div>
         </div>
