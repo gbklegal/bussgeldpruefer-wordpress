@@ -38,5 +38,12 @@ export default {
 
 #main {
   max-width: 100%;
+  position: relative;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 </style>

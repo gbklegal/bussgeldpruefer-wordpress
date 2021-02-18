@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header id="header">
         <a class="sr-only" href="#main">Skip to content</a>
         <nav id="nav" class="mt-3 pb-2 px-3 border-b-2 border-primary shadow">
 

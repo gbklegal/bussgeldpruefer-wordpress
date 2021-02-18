@@ -81,6 +81,7 @@
 
     <BasicSocialMedia />
     <BasicWarrants />
+    <BasicBackToTop />
 
   </div>
 </template>
@@ -90,6 +91,7 @@ import BasicCTA from '../components/BasicCTA.vue'
 import BasicSteps from '../components/BasicSteps.vue'
 import BasicSocialMedia from '../components/BasicSocialMedia.vue'
 import BasicWarrants from '../components/BasicWarrants.vue'
+import BasicBackToTop from '../components/BasicBackToTop.vue'
 
 export default {
   name: 'Home',
@@ -97,7 +99,8 @@ export default {
     BasicCTA,
     BasicSteps,
     BasicSocialMedia,
-    BasicWarrants
+    BasicWarrants,
+    BasicBackToTop
   }
 }
 </script>
