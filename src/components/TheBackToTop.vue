@@ -1,4 +1,5 @@
 <template>
+<!-- TODO: Problem with pages that are 100vh or smaller -->
     <div class="p-2 absolute rounded-full">
         <a href="#header">
             <svg class="w-10 bg-white rounded-full" role="img" aria-labelledby="bttLabel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
