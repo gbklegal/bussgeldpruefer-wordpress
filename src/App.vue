@@ -44,6 +44,18 @@ export default {
   position: relative;
 }
 
+#nav .router-link-exact-active {
+  background-color: #5CC8C5;
+  color: #fff;
+  padding: 0.25rem;
+}
+
+@media (min-width: 1300px) {
+  #nav .router-link-exact-active {
+    padding: 0.5rem;
+  }
+}
+
 @media screen and (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;

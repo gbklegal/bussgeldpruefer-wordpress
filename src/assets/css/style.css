@@ -2,13 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    .process-text p {
+        @apply mb-2;
+    }
+
+    summary {
+        list-style: none;
+    }
+
+    details summary {
+        @apply cursor-pointer bg-gray-200 p-2 my-2 rounded;
+    }
+
+    details summary > * {
+        @apply inline;
+    }
+
+    details[open] summary {
+        @apply mb-0;
+    }
+
+    /*a {
+        @apply rounded focus:ring focus:border-secondary focus:ring-secondary focus:ring-opacity-50;
+    }*/
+}
+
 @layer components {
     .btn-primary {
-        @apply bg-secondary rounded border-2 border-secondary hover:bg-secondary-hover hover:border-secondary-hover shadow text-white py-2 px-1;
+        @apply bg-secondary rounded border-2 border-secondary hover:bg-secondary-hover hover:border-secondary-hover shadow text-white py-2 px-1 focus:ring focus:border-secondary focus:ring-secondary focus:ring-opacity-50;
     }
 
     .btn-secondary {
-        @apply border-2 border-primary rounded hover:text-white hover:bg-primary-hover hover:border-primary-hover py-2 px-1 shadow;
+        @apply border-2 border-primary rounded hover:text-white hover:bg-primary-hover hover:border-primary-hover py-2 px-1 shadow focus:ring focus:border-secondary focus:ring-secondary focus:ring-opacity-50;
     }
 
     .header-navigation li {
@@ -16,7 +42,7 @@
     }
 
     nav li a {
-        @apply py-1 hover:underline;
+        @apply rounded py-1 hover:underline focus:ring focus:border-secondary focus:ring-secondary focus:ring-opacity-50;
     }
 
     .container {
