@@ -11,7 +11,7 @@
 
                 </router-link>
 
-                <button v-on:click="menuOpen = !menuOpen" class="w-7 xl:hidden xl:invisible">
+                <button v-on:click="menuOpen = !menuOpen" class="w-7 xl:hidden xl:invisible focus:ring rounded focus:border-secondary focus:ring-secondary focus:ring-opacity-50">
                     <!-- Icons from Heroicon -->
                     <svg v-if="!menuOpen" role="img" aria-labelledby="openMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <title id="openMenu">Open Menu</title>
@@ -27,22 +27,22 @@
                     <router-link class="btn-secondary" to="/login">Login</router-link>
                 </div>
             <ul class="header-navigation" :class="{ block: menuOpen }">
-                <li>
+                <li v-on:click="menuOpen = !menuOpen">
                     <router-link to="/wie-funktioniert-es">Wie funktioniert's</router-link>
                 </li>
-                <li>
+                <li v-on:click="menuOpen = !menuOpen">
                     <router-link to="/kontakt">Kontakt</router-link>
                 </li>
-                <li>
+                <li v-on:click="menuOpen = !menuOpen">
                     <router-link to="/bussgeldkatalog">Bußgeldkatalog</router-link>
                 </li>
-                <li>
+                <li v-on:click="menuOpen = !menuOpen">
                     <router-link to="/ratgeber">Bußgeldratgeber</router-link>
                 </li>
-                <li>
+                <li v-on:click="menuOpen = !menuOpen">
                     <router-link to="/faq">FAQ</router-link>
                 </li>
-                <li>
+                <li v-on:click="menuOpen = !menuOpen">
                     <router-link to="/relevante-themen">relevante Bußgeldthemen</router-link>
                 </li>
             </ul>
